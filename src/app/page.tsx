@@ -2,41 +2,98 @@ export default function Home() {
   return (
     <main
       style={{
-        height: "100vh",
+        minHeight: "100vh",
+        background: "#f4f7f5",
+        direction: "rtl",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        background: "#f5f7fa",
-        direction: "rtl",
+        fontFamily: "Tahoma",
       }}
     >
       <div
         style={{
-          textAlign: "center",
+          width: "420px",
           background: "#ffffff",
+          borderRadius: "24px",
           padding: "40px",
-          borderRadius: "20px",
-          boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
+          boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
+          textAlign: "center",
         }}
       >
+        <div
+          style={{
+            width: "80px",
+            height: "80px",
+            margin: "0 auto 20px",
+            borderRadius: "20px",
+            background: "#0f766e",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            color: "#fff",
+            fontSize: "34px",
+          }}
+        >
+          🎓
+        </div>
+
         <h1
           style={{
             color: "#0f766e",
-            fontSize: "40px",
             marginBottom: "10px",
           }}
         >
-          الموجه الذكي
+          نظام توجيه ذكي
         </h1>
 
         <p
           style={{
             color: "#666",
-            fontSize: "18px",
+            marginBottom: "30px",
           }}
         >
-          أول نسخة تعمل بنجاح 🚀
+          منصة الموجه الطلابي الذكية
         </p>
+
+        <input
+          type="text"
+          placeholder="رقم الجوال"
+          style={{
+            width: "100%",
+            padding: "14px",
+            marginBottom: "12px",
+            borderRadius: "12px",
+            border: "1px solid #ddd",
+          }}
+        />
+
+        <input
+          type="text"
+          placeholder="رمز التحقق"
+          style={{
+            width: "100%",
+            padding: "14px",
+            marginBottom: "20px",
+            borderRadius: "12px",
+            border: "1px solid #ddd",
+          }}
+        />
+
+        <button
+          style={{
+            width: "100%",
+            padding: "14px",
+            border: "none",
+            borderRadius: "12px",
+            background: "#0f766e",
+            color: "#fff",
+            fontSize: "16px",
+            cursor: "pointer",
+          }}
+        >
+          تسجيل الدخول
+        </button>
       </div>
     </main>
   );
