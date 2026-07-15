@@ -1,3 +1,5 @@
+﻿import Link from "next/link";
+
 export default function Home() {
   return (
     <main
@@ -5,54 +7,44 @@ export default function Home() {
         minHeight: "100vh",
         background: "#f4f7f5",
         direction: "rtl",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        fontFamily: "Tahoma",
+        padding: "24px",
+        boxSizing: "border-box",
       }}
     >
       <div
         style={{
-          width: "420px",
+          width: "100%",
+          maxWidth: 480,
+          margin: "0 auto",
           background: "#ffffff",
-          borderRadius: "24px",
-          padding: "40px",
+          borderRadius: 24,
+          padding: "32px",
           boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
           textAlign: "center",
         }}
       >
         <div
           style={{
-            width: "80px",
-            height: "80px",
+            width: 80,
+            height: 80,
             margin: "0 auto 20px",
-            borderRadius: "20px",
+            borderRadius: 20,
             background: "#0f766e",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
             color: "#fff",
-            fontSize: "34px",
+            fontSize: 34,
           }}
         >
           🎓
         </div>
 
-        <h1
-          style={{
-            color: "#0f766e",
-            marginBottom: "10px",
-          }}
-        >
+        <h1 style={{ color: "#0f766e", marginBottom: 10 }}>
           نظام توجيه ذكي
         </h1>
 
-        <p
-          style={{
-            color: "#666",
-            marginBottom: "30px",
-          }}
-        >
+        <p style={{ color: "#666", marginBottom: 30 }}>
           منصة الموجه الطلابي الذكية
         </p>
 
@@ -61,10 +53,11 @@ export default function Home() {
           placeholder="رقم الجوال"
           style={{
             width: "100%",
-            padding: "14px",
-            marginBottom: "12px",
-            borderRadius: "12px",
+            padding: 14,
+            marginBottom: 12,
+            borderRadius: 12,
             border: "1px solid #ddd",
+            boxSizing: "border-box",
           }}
         />
 
@@ -73,27 +66,37 @@ export default function Home() {
           placeholder="رمز التحقق"
           style={{
             width: "100%",
-            padding: "14px",
-            marginBottom: "20px",
-            borderRadius: "12px",
+            padding: 14,
+            marginBottom: 20,
+            borderRadius: 12,
             border: "1px solid #ddd",
+            boxSizing: "border-box",
           }}
         />
 
         <button
           style={{
             width: "100%",
-            padding: "14px",
+            padding: 14,
             border: "none",
-            borderRadius: "12px",
+            borderRadius: 12,
             background: "#0f766e",
             color: "#fff",
-            fontSize: "16px",
+            fontSize: 16,
             cursor: "pointer",
           }}
         >
           تسجيل الدخول
         </button>
+
+        <div style={{ marginTop: 20 }}>
+          <Link
+            href="/login"
+            style={{ color: "#0f766e", textDecoration: "underline" }}
+          >
+            الذهاب إلى صفحة الدخول
+          </Link>
+        </div>
       </div>
     </main>
   );
